@@ -7,12 +7,12 @@ def leniarPoisk(a, b):
 
 if __name__ == '__main__':
     import time
-    for i in range(10, 100, 10):
+    for i in range(100, 1000, 100):
         a = [j for j in range(i)]
         b = 0
-        for o in range(len(a), i + 100):
+        for o in range(len(a), i + 1000):
             start = time.perf_counter()
             leniarPoisk(a, o)
             end = time.perf_counter()
             b += end - start
-        print(f"{i} {(b / i):.8f}")
+        print(f"{i} {(b / (i + 1000-1)):.8f}")
